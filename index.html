@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVD Rental Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DVD Rental Management Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#rental-management">Rental Management</a></li>
+                <li><a href="Dvd_management.html">Inventory Management</a></li>
+                <li><a href="#customer-management">Customer Management</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#user-settings">User Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="rental-management">
+            <h2>Rental Management</h2>
+            <div>
+                <h3>Current Rentals</h3>
+                <table id="current-rentals">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>DVD Title</th>
+                            <th>Customer ID</th>
+                            <th>Rental Date</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rental data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3>Overdue Rentals</h3>
+                <table id="overdue-rentals">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>DVD Title</th>
+                            <th>Customer ID</th>
+                            <th>Rental Date</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Overdue data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="inventory-management">
+            <h2>Inventory Management</h2>
+            <div>
+                <h3>DVD Catalog</h3>
+                <table id="dvd-catalog">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Genre</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- DVD catalog data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3>Add DVD</h3>
+                <form id="add-dvd-form">
+                    <label for="dvd-title">Title:</label>
+                    <input type="text" id="dvd-title" required>
+                    <label for="dvd-genre">Genre:</label>
+                    <input type="text" id="dvd-genre" required>
+                    <label for="dvd-stock">Stock:</label>
+                    <input type="number" id="dvd-stock" required>
+                    <button type="submit">Add DVD</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="customer-management">
+            <h2>Customer Management</h2>
+            <div>
+                <h3>Customer List</h3>
+                <table id="customer-list">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Customer data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3>Update Customer</h3>
+                <form id="update-customer-form">
+                    <label for="customer-id">Customer ID:</label>
+                    <input type="number" id="customer-id" required>
+                    <label for="customer-name">Name:</label>
+                    <input type="text" id="customer-name">
+                    <label for="customer-email">Email:</label>
+                    <input type="email" id="customer-email">
+                    <button type="submit">Update Customer</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="notifications">
+            <h2>Notifications</h2>
+            <div>
+                <h3>Alerts</h3>
+                <ul id="alerts-list">
+                    <!-- Notifications will be listed here -->
+                </ul>
+            </div>
+        </section>
+
+        <section id="user-settings">
+            <h2>User Settings</h2>
+            <div>
+                <h3>User Management</h3>
+                <form id="add-user-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                    <label for="role">Role:</label>
+                    <select id="role" required>
+                        <option value="Admin">Admin</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+                    <button type="submit">Add User</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 DVD Rental Management</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

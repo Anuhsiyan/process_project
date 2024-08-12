@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVD Rental Management System</title>
+    <link rel="stylesheet" href="./Dvd_management.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DVD Management</h1>
+        
+        <!-- Form to add a new DVD -->
+        <form id="addDVDForm">
+            <h2>Add New DVD</h2>
+            <label for="title">Title:</label>
+            <input type="text" id="title" required><br>
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" required><br>
+            <label for="director">Director:</label>
+            <input type="text" id="director" required><br>
+            <label for="releaseDate">Release Date:</label>
+            <input type="date" id="releaseDate" required><br>
+            <button type="submit">Add DVD</button>
+            <button type="button" onclick="removeDVD()">Remove DVD</button>
+        </form>
+
+        <hr>
+
+    
+        <div id="dvdList">
+            <h2>Current DVDs</h2>
+            <ul id="dvdItems">
+              
+            </ul>
+        </div>
+    </div>
+
+    <script src="Dvd_management.js"></script>
+</body>
+</html>
